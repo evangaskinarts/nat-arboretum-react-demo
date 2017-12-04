@@ -1,17 +1,22 @@
 import React, { Component } from 'react';
 import './una-sass/aux.css';
 import heroImg from './images/bgShaded.jpg';
+import TimeBlock from './TimeBlock';
+
 
 
 class HomeHero extends Component {
   render() {
     return (
       <div>
-      <img className="leadImg" src="http://valholl-prd.wowair.com/mediaold/us-magazine/1680px/Washington-National-Arboretum-Capitol-Columns-Thingstock.jpg"/>
+      <section className="leadHero">
+        <h1 className="titleH">The United <br /> States National Arboretum</h1>
+        <div className="leadImg" style={{backgroundImage: `url(${this.props.photos[4]})`}}></div>
+      </section>
+      
         <section className="homeHero">
-        <h1>The United <br /> States National Arboretum</h1>
+          <TimeBlock />
           <div className="heroImg" style={{backgroundImage: `url(${heroImg})`}}>
-            
           </div>
         </section>
       </div>

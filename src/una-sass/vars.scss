@@ -6,3 +6,26 @@ $redOrange: #FC5B44;
 $darkPurp: #352F3B;
 
 // $purpSlate: #F7F6FD;
+
+$small-width: 500px;
+$medium-width: 768px;
+$large-width: 960px;
+
+
+@mixin small {
+    @media all and (max-width: #{$small-width - 1px}) {
+      @content;
+    }
+  }
+
+@mixin medium {
+  @media (min-width: #{$mid-width}) and (max-width: #{$large-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media (min-width: #{$large-width}) {
+    @content;
+  }
+}

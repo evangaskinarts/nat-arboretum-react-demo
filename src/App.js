@@ -5,7 +5,7 @@ import './una-sass/aux.css';
 import Header from './Header';
 import Footer from './Footer';
 import HomeHero from './HomeHero';
-import TimeBlock from './TimeBlock';
+
 import AboutBlock from './AboutBlock';
 import GalleryBlock from './GalleryBlock';
 import EventsBlock from './EventsBlock';
@@ -18,10 +18,7 @@ class App extends Component {
         <div className="orange"></div>
         <div className="purpSlate"></div>
         <Header links={this.props.links}/>
-        <HomeHero />
-        <section className="firstSec">
-        <TimeBlock />
-        </section>
+        <HomeHero photos={this.props.photos}/>
         <section className="content-block-section">
         <AboutBlock />
         <GalleryBlock photos={this.props.photos}/>

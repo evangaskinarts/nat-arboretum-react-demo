@@ -48,6 +48,10 @@ a {
   background: white;
 }
 
+.header-scrolled {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
 .hLogo {
   height: 50px;
   width: 50px;
@@ -201,41 +205,51 @@ a {
 .homeHero {
   padding: 40px;
   padding-top: 60px;
-  height: 550px;
   position: relative;
 }
 .homeHero .heroImg {
   width: 100%;
-  max-width: calc(100vw - 80px);
   background-size: contain;
-  height: calc(100% - 60px);
-  height: 100%;
+  height: 550px;
   background-position: top;
-  position: absolute;
   object-fit: contain;
   z-index: -1;
   border-radius: 5px;
-  top: 60vh;
-  top: 160vh;
 }
-.homeHero h1 {
+
+.titleH {
   font-size: 90px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: .1em;
   text-align: left;
-  position: relative;
+  position: absolute;
   color: white;
-  left: 60px;
+  max-width: 100%;
+  left: 0px;
   top: 90px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
   color: #352F3B;
   top: -59vh;
   font-weight: 700;
   text-shadow: none;
-  left: 0px;
+  padding-left: 40px;
   font-size: 100px;
-  top: -48vh;
+  top: 1vh;
+}
+
+.leadImg {
+  width: 100%;
+  left: 0;
+  z-index: -1;
+  margin-top: 62vh;
+  height: 90vh;
+  background-size: cover;
+  background-position: center top;
+}
+
+.leadHero {
+  padding: 0;
 }
 
 .orange {
@@ -245,7 +259,7 @@ a {
   height: 140vh;
   top: 40vh;
   z-index: -5;
-  height: 200vh;
+  height: 270vh;
 }
 
 .purpSlate {
@@ -259,16 +273,13 @@ a {
 
 section {
   padding: 15px;
-  margin-bottom: 45px;
-  margin-bottom: 70px;
-  margin-top: 40vh;
+  margin-bottom: 20px;
 }
 
 .content-block-section {
   display: flex;
   justify-content: space-between;
   max-height: 600px;
-  margin-top: 50vh;
 }
 
 .pageBlock {
@@ -299,7 +310,10 @@ section {
   background: #352F3B;
   background: white;
   display: block;
+  position: absolute;
+  top: 40%;
   margin: 0;
+  left: 20px;
   float: none;
 }
 .times .ifOpen {
@@ -334,20 +348,6 @@ section {
 }
 .moreButton:after {
   content: ' ▸';
-}
-
-.homeHero .heroImg  {
-  width:  calc(100%);
-  max-width:  100vw-80px;
-  background-size:  contain;
-  height:  100vw-60px;
-  height:  100vh;
-  top:  60vh;
-  background-position:  top;
-  position:  absolute;
-  object-fit:  contain;
-  z-index:  -1;
-  border-radius:  5px;
 }
 
 .homeHero h1  {
@@ -469,12 +469,12 @@ section {
   width: 100%;
   background: #eeedf5;
   min-height: 250px;
-  top: 40px;
+  margin-top: 70px;
   bottom: 0;
   position: relative;
   font-family: 'Barlow', sans-serif;
   font-weight: 700;
-  padding: 30px 0 50px 0;
+  padding: 30px 20px 50px 20px;
 }
 #footer p {
   font-family: SF UI Text,'Source Sans Pro', sans-serif;
@@ -489,16 +489,104 @@ section {
   margin: 0;
 }
 
-.leadImg {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  z-index: -1;
-  top: 60vh;
-}
-
 .firstSec {
   margin-top: 60vh;
+  margin-top: 0;
+}
+
+.menuBurger {
+  display: none;
+  height: 100%;
+}
+
+@media all and (max-width: 960px) {
+  #header {
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  .homeHero {
+    padding: 20px;
+    height: 60vh;
+  }
+
+  .linkBox {
+    display: none;
+  }
+
+  .photos .photosList {
+    height: 400px;
+  }
+
+  .times {
+    min-width: calc(100% - 40px) !important;
+    left: 20px;
+  }
+
+  .hLogo {
+    height: 50px;
+    width: 40px;
+    background-size: 70%;
+    background-position: right;
+  }
+
+  .leadImg {
+    width: 100%;
+    left: 0;
+    height: 55vh;
+    z-index: -1;
+    top: 52vh;
+  }
+
+  .menuBurger {
+    display: flex;
+    height: 100%;
+    width: 50px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+  }
+
+  .titleH {
+    font-size: 48px;
+    top: 8vh;
+    padding: 20px;
+  }
+
+  #hSearch {
+    min-width: 140px;
+  }
+
+  #social {
+    min-width: 110px;
+    float: right;
+  }
+
+  .pageBlock {
+    min-width: 100%;
+    max-width: 100%;
+    margin: 20px auto !important;
+  }
+
+  .content-block-section {
+    height: auto;
+    max-height: none;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  .homeHero {
+    height: auto;
+  }
+
+  .firstSec {
+    margin-top: 0;
+  }
 }
 
 /*# sourceMappingURL=aux.css.map */

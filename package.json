@@ -2,7 +2,7 @@
   "name": "nat-arboretum-react-demo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://evangaskinarts.github.io/nat-arboretum-react-demo",
+  "homepage": "http://evangaskinarts.github.io/nat-arboretum-react-demo",
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
